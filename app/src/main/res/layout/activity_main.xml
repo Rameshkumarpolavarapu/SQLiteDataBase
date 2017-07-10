@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ramesh.sqlitedatabase.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts"
+     />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:inputType="textPersonName"
+            android:id="@+id/name"
+            android:hint="@string/enter_your_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/phone"
+            android:hint="@string/enter_your_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <Button
+        android:onClick="clickSearch"
+
+        style="?attr/buttonBarButtonStyle"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="@string/view"
+        android:id="@+id/viewBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <Button
+
+        android:onClick="clickAdd"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="@string/add"
+        android:id="@+id/addBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <!--<Button-->
+        <!--android:onClick="clickUpdate"-->
+        <!--style="?attr/buttonBarButtonStyle"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:text="@string/update"-->
+        <!--android:id="@+id/updateBtn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<Button-->
+        <!--android:onClick="clickDelete"-->
+        <!--style="?attr/buttonBarButtonStyle"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:text="@string/delete"-->
+        <!--android:id="@+id/deleteBtn"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content" />-->
+</LinearLayout>
+    <LinearLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_marginTop="10dp"
+            android:dividerHeight="1dp"
+            android:id="@+id/list"
+            android:divider="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
